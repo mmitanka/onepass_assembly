@@ -1,0 +1,75 @@
+Header section table: 
+               name                type                size 
+                                    null                   0
+             tabsymb             tabsymb                1320
+               .data               .data                  21
+           .rel.data                .rel                  32
+                .bss                .bss                  16
+               .sek1               .sek1                  24
+           .rel.sek1                .rel                  48
+               .text               .text                  25
+           .rel.text                .rel                  48
+
+
+
+Symbol Table: 
+index     name      value     section   type      size      defined   flink     
+0         UND       0         0         local     0         true      
+
+1         a         10        5         global    0         true      
+
+2         min       12        5         global    0         true      
+
+3         d         11        9         global    0         true      1  
+
+4         b         0         0         extern    0         false     
+
+5         .data     0         5         local     21        true      
+
+6         g         20        5         local     0         true      16  
+
+7         .bss      0         7         local     16        true      
+
+8         c         2         7         local     0         true      
+
+9         .sek1     0         9         local     24        true      
+
+10        f         0         9         local     0         true      
+
+11        e         12        9         local     0         true      
+
+12        .text     0         12        local     25        true      
+
+13        mih       3         12        local     0         true      
+
+14        kr        24        12        local     0         true      22  
+
+
+Section table : .data
+00 00 00 00 00 00 00 00 00 00 02 01 85 c1 00 00 14 00 00 00 0d 
+
+Relocation table: .rel.data
+offset    type      nb        
+14        R_16      5         
+16        R_16      5         
+
+
+Section table : .sek1
+0c 00 00 00 00 00 00 d3 00 00 00 f8 cc 67 74 00 45 12 68 43 00 64 24 42 
+
+Relocation table: .rel.sek1
+offset    type      nb        
+3         R_16      9         
+5         R_16      1         
+1         R_16      3         
+
+Section table : .text
+1c 00 55 6c 00 00 00 6e fe ff 34 6e f5 ff 60 27 28 8c 24 26 3c 00 18 00 04 
+
+Relocation table: .rel.text
+offset    type      nb        
+5         R_16      4         
+8         R_PC16    9         
+22        R_16      12        
+
+

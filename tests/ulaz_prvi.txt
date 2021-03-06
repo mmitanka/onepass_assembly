@@ -1,0 +1,41 @@
+#Testing:
+.global a,min,d
+.extern b
+
+.section .data
+    .skip 7, 0x03
+ a: .byte 2,  0x01
+ min: .word 0xc185, .data
+	.word g
+    .skip 2
+
+g: .byte 13
+
+.section .bss
+	.skip 2
+ c: .skip 3,10
+    .skip 1
+	
+.section .sek1
+
+f: .byte 12
+    .word d,f
+	.word a
+	.byte 0xD3	
+	.skip 3
+ d: .byte 0xF8
+ e: .word 0x67cc
+	sub $0x1245,0x43(%r4)
+    mov %r2,(%r1)
+ .section .text 
+	int 0x55
+ mih: add $b, f(%r7) 
+	
+	jeq *mih(%pc) 
+    movb %r3h,%r4
+    cmp %r2,%r3
+	jne kr
+
+kr: halt
+#//
+.end
